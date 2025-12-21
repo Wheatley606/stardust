@@ -1,13 +1,13 @@
 {
     "Debug": {
-        "enable_logs": true,
+        "enable_logs": false,
         "PC_IP_ADDRESS" : "192.168.1.140"
     },
     
     "Mods": {
-        "Play as Luigi": true,
+        "Play as Luigi": false,
         "Daredevil Mode": false,
-        "Red Star Power Up": true,
-        "Extended Actor Factory": true
+        "Red Star Power Up": false,
+        "Extended Actor Factory": false
     }
 }
