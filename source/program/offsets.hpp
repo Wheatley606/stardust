@@ -11,7 +11,271 @@ namespace exl::reloc {
     template<VersionType Version, impl::LookupEntry... Entries>
     using UserTableType = VersionedTable<Version, Entries...>;
 
-    using UserTableSet = TableSet<VersionType,         
+    using UserTableSet = TableSet<VersionType, 
+        UserTableType<VersionType::V1_3_0,
+            { util::ModuleIndex::Main,          0x00086700,                 "_ZN16GameDataFunction34tryOnDimensionBigCastleGalaxyCometEv" },
+            { util::ModuleIndex::Main,          0x00086C10,                 "_ZN16GameDataFunction13isLuigiPlayerEv" },
+
+            { util::ModuleIndex::Main,          0x000A0160,                 "_ZN13NerveExecutorC1EPKc" },
+            { util::ModuleIndex::Main,          0x000A0194,                 "_ZN13NerveExecutorD1Ev" },
+            { util::ModuleIndex::Main,          0x000A01B8,                 "_ZN13NerveExecutor9initNerveEPK5Nervel" },
+            { util::ModuleIndex::Main,          0x000A0204,                 "_ZN13NerveExecutor11updateNerveEv" },
+            { util::ModuleIndex::Main,          0x000A0214,                 "_ZN13NerveExecutor8setNerveEPK5Nerve" },
+            { util::ModuleIndex::Main,          0x000A021C,                 "_ZNK13NerveExecutor7isNerveEPK5Nerve" },
+            { util::ModuleIndex::Main,          0x000A0248,                 "_ZNK13NerveExecutor12getNerveStepEv" },
+
+            { util::ModuleIndex::Main,          0x000B58A0,                 "_ZN2MR13isEqualStringEPKcPKc" },
+            { util::ModuleIndex::Main,          0x000B58C0,                 "_ZN2MR17isEqualStringCaseEPKcS1_" },
+
+            { util::ModuleIndex::Main,          0x000B6ED0,                 "_ZN2MR17isStageFileSelectEv" },
+
+            { util::ModuleIndex::Main,          0x000B8D50,                 "_ZN2MR39isGalaxyHorrorCometAppearInCurrentStageEv" },
+
+            { util::ModuleIndex::Main,          0x000B9100,                 "_ZN2MR27explainFlyingMarioIfAtFirstEv" },
+
+            { util::ModuleIndex::Main,          0x000B9140,                 "_ZN2MR35isOnGameEventFlagFlyingMarioAtFirstEv" },
+
+            { util::ModuleIndex::Main,          0x000B9600,                 "_ZN2MR33onGameEventFlagFlyingMarioAtFirstEv" },
+
+            { util::ModuleIndex::Main,          0x000B9940,                 "_ZN2MR29isOnGameEventFlagNormalEndingEv" },
+            { util::ModuleIndex::Main,          0x000B9950,                 "_ZN2MR36isOnGameEventFlag120PowerStarsEndingEv" },
+
+            { util::ModuleIndex::Main,          0x000B9ED0,                 "_ZN2MR37isGalaxyDarkCometAppearInCurrentStageEv" },
+            { util::ModuleIndex::Main,          0x000B9EE0,                 "_ZN2MR38isGalaxyQuickCometAppearInCurrentStageEv" },
+            { util::ModuleIndex::Main,          0x000B9EF0,                 "_ZN2MR39isGalaxyPurpleCometAppearInCurrentStageEv" },
+            { util::ModuleIndex::Main,          0x000B9F00,                 "_ZN2MR40isGalaxyRainbowCometAppearInCurrentStageEv" },
+
+            { util::ModuleIndex::Main,          0x000BAC40,                 "_ZN2MR20connectToSceneLayoutEP7NameObj" },
+
+            { util::ModuleIndex::Main,          0x000BDF88,                 "_ZN7NameObj13startMovementEv" },
+            { util::ModuleIndex::Main,          0x000BDF8C,                 "_ZN7NameObj11endMovementEv" },
+
+            { util::ModuleIndex::Main,          0x000BDF90,                 "_ZN9LiveActor15updateHitSensorEP9HitSensor" },
+            { util::ModuleIndex::Main,          0x000BDF94,                 "_ZN9LiveActor14receiveMsgPushEP9HitSensorS1_" },
+            { util::ModuleIndex::Main,          0x000BDF9C,                 "_ZN9LiveActor21receiveMsgEnemyAttackEjP9HitSensorS1_" },
+
+            { util::ModuleIndex::Main,          0x000BE148,                 "_ZN12JMapLinkInfoC1Ev" },
+            { util::ModuleIndex::Main,          0x000BE15C,                 "_ZN12JMapLinkInfoC1ERK12JMapInfoIterb" },
+            { util::ModuleIndex::Main,          0x000BE178,                 "_ZN12JMapLinkInfo13setLinkedInfoERK12JMapInfoIter" },
+            { util::ModuleIndex::Main,          0x000BE264,                 "_ZN12JMapLinkInfo11setLinkInfoERK12JMapInfoIter" },
+            { util::ModuleIndex::Main,          0x000BE3FC,                 "_ZNK12JMapLinkInfo7isValidEv" },
+
+            { util::ModuleIndex::Main,          0x000BE424,                 "_ZN8JMapInfoC1Ev" },
+            { util::ModuleIndex::Main,          0x000BE434,                 "_ZN8JMapInfoD1Ev" },
+            { util::ModuleIndex::Main,          0x000BE438,                 "_ZN8JMapInfo6attachEPKv" },
+            { util::ModuleIndex::Main,          0x000BE44C,                 "_ZN8JMapInfo7setNameEPKc" },
+            { util::ModuleIndex::Main,          0x000BE454,                 "_ZNK8JMapInfo7getNameEv" },
+            { util::ModuleIndex::Main,          0x000BE460,                 "_ZNK8JMapInfo14searchItemInfoEPKc" },
+            { util::ModuleIndex::Main,          0x000BE4F0,                 "_ZNK8JMapInfo12getValueTypeEPKc" },
+            { util::ModuleIndex::Main,          0x000BE57C,                 "_ZNK8JMapInfo12getValueFastEiiPPKc" },
+            { util::ModuleIndex::Main,          0x000BE5CC,                 "_ZNK8JMapInfo12getValueFastEiiPm" },
+            { util::ModuleIndex::Main,          0x000BE654,                 "_ZNK8JMapInfo12getValueFastEiiPl" },
+
+            { util::ModuleIndex::Main,          0x000BE830,                 "_ZN2MR11getHashCodeEPKc" },
+
+            { util::ModuleIndex::Main,          0x000D11E0,                 "_ZN2MR13getObjectNameEPPKcRK12JMapInfoIter" },
+            { util::ModuleIndex::Main,          0x000D12B0,                 "_ZN2MR12isObjectNameERK12JMapInfoIterPKc" },
+
+            { util::ModuleIndex::Main,          0x000D9880,                 "_ZN2MR17validateHitSensorEP9HitSensor" },
+            { util::ModuleIndex::Main,          0x000D9890,                 "_ZN2MR19invalidateHitSensorEP9HitSensor" },
+
+            { util::ModuleIndex::Main,          0x000D95B0,                 "_ZN2MR12isSensorTypeEPK9HitSensorm" },
+
+            { util::ModuleIndex::Main,          0x0012D1D4,                 "_ZN23ActorStateBaseInterface4initEv" },
+            { util::ModuleIndex::Main,          0x0012D4B8,                 "_ZN23ActorStateBaseInterface7controlEv" },
+
+            { util::ModuleIndex::Main,          0x00138550,                 "_ZN13EventFunction17isStartCometEventEPKc" },
+
+            { util::ModuleIndex::Main,          0x0015C708,                 "_ZN9LiveActorC1EPKc" },
+            { util::ModuleIndex::Main,          0x0015C7AC,                 "_ZN9LiveActor4initERK12JMapInfoIter" },
+            { util::ModuleIndex::Main,          0x0015C7B0,                 "_ZN9LiveActor6appearEv" },   
+            { util::ModuleIndex::Main,          0x0015C7BC,                 "_ZN9LiveActor17makeActorAppearedEv" },    
+            { util::ModuleIndex::Main,          0x0015C85C,                 "_ZN9LiveActor4killEv" },
+            { util::ModuleIndex::Main,          0x0015C8B0,                 "_ZN9LiveActor13makeActorDeadEv" },
+            { util::ModuleIndex::Main,          0x0015C928,                 "_ZN9LiveActor8movementEv" },
+            { util::ModuleIndex::Main,          0x0015CA88,                 "_ZN9LiveActor8calcAnimEv" },
+            { util::ModuleIndex::Main,          0x0015CAFC,                 "_ZN9LiveActor10calcAnmMtxEv" },
+            { util::ModuleIndex::Main,          0x0015CB4C,                 "_ZN9LiveActor16calcViewAndEntryEv" },
+            { util::ModuleIndex::Main,          0x0015CB64,                 "_ZN9LiveActor14receiveMessageEjP9HitSensorS1_" },   
+            { util::ModuleIndex::Main,          0x0015CBB8,                 "_ZN9LiveActor17calcAndSetBaseMtxEv" },    
+            { util::ModuleIndex::Main,          0x0015CC54,                 "_ZNK9LiveActor12getTakingMtxEv" },
+            { util::ModuleIndex::Main,          0x0015CC60,                 "_ZN9LiveActor8setNerveEPK5Nerve" },
+            { util::ModuleIndex::Main,          0x0015CC68,                 "_ZNK9LiveActor7isNerveEPK5Nerve" },
+            { util::ModuleIndex::Main,          0x0015CC94,                 "_ZNK9LiveActor12getNerveStepEv" },
+            { util::ModuleIndex::Main,          0x0015CCA0,                 "_ZNK9LiveActor9getSensorEPKc" },   
+            { util::ModuleIndex::Main,          0x0015CCB0,                 "_ZNK9LiveActor10getBaseMtxEv" },    
+            { util::ModuleIndex::Main,          0x0015CCE0,                 "_ZN9LiveActor12startClippedEv" },
+            { util::ModuleIndex::Main,          0x0015CD40,                 "_ZN9LiveActor10endClippedEv" },
+            { util::ModuleIndex::Main,          0x0015CDA4,                 "_ZN9LiveActor23initModelManagerWithAnmEPKcPKcPKcb" },
+            { util::ModuleIndex::Main,          0x0015CE4C,                 "_ZN9LiveActor9initNerveEPK5Nervel" },
+            { util::ModuleIndex::Main,          0x0015CE98,                 "_ZN9LiveActor13initHitSensorEl" },
+            { util::ModuleIndex::Main,          0x0015CED8,                 "_ZN9LiveActor10initBinderEffm" },
+            { util::ModuleIndex::Main,          0x0015CF78,                 "_ZN9LiveActor13initRailRiderERK12JMapInfoIter" },   
+            { util::ModuleIndex::Main,          0x0015CFB8,                 "_ZN9LiveActor16initEffectKeeperElPKcb" },    
+            { util::ModuleIndex::Main,          0x0015D060,                 "_ZN9LiveActor9initSoundElPKcNPK9JGeometry5TVec3IfEENRK9JGeometry5TVec3IfEE" },
+            { util::ModuleIndex::Main,          0x0015D0C8,                 "_ZN9LiveActor24initShadowControllerListEm" },
+            { util::ModuleIndex::Main,          0x0015D10C,                 "_ZN9LiveActor23initActorCollisionPartsEPKcP9HitSensorP14ResourceHolderPA4_fbb" },
+            { util::ModuleIndex::Main,          0x0015D200,                 "_ZN9LiveActor15initStageSwitchERK12JMapInfoIter" },
+            { util::ModuleIndex::Main,          0x0015D224,                 "_ZN9LiveActor26initActorStarPointerTargetEfNPK9JGeometry5TVec3IfEEPA4_fN9JGeometry5TVec3IfEE" },   
+            { util::ModuleIndex::Main,          0x0015D29C,                 "_ZN9LiveActor18initActorLightCtrlEv" },    
+            { util::ModuleIndex::Main,          0x0015D2D0,                 "_ZN9LiveActor12attackSensorEP9HitSensorS1_" },
+            { util::ModuleIndex::Main,          0x0015D2D4,                 "_ZN9LiveActorD1Ev" },
+            { util::ModuleIndex::Main,          0x0015D2F8,                 "_ZN9LiveActor7controlEv" },
+            { util::ModuleIndex::Main,          0x0015D2FC,                 "_ZN9LiveActor22receiveMsgPlayerAttackEmP9HitSensorP9HitSensor" },
+            { util::ModuleIndex::Main,          0x0015D304,                 "_ZN9LiveActor15receiveOtherMsgEmP9HitSensorP9HitSensor" },
+
+            { util::ModuleIndex::Main,          0x0015D30C,                 "_ZN13LiveActorFlagC1Ev" },
+
+            { util::ModuleIndex::Main,          0x0015E6E0,                 "_ZN11SensorGroupC1EiPKc" },
+            { util::ModuleIndex::Main,          0x0015E744,                 "_ZN11SensorGroup3addEP9HitSensor" },
+            { util::ModuleIndex::Main,          0x0015E770,                 "_ZN11SensorGroup6removeEP9HitSensor" },
+
+            { util::ModuleIndex::Main,          0x0015E7C8,                 "_ZN16SensorHitCheckerC1EPKc" },
+            { util::ModuleIndex::Main,          0x0015E8C4,                 "_ZN16SensorHitChecker4initERK12JMapInfoIter" },
+            { util::ModuleIndex::Main,          0x0015E8D8,                 "_ZN16SensorHitChecker9initGroupEP9HitSensor" },   
+            { util::ModuleIndex::Main,          0x0015EA00,                 "_ZN16SensorHitChecker8movementEv" },    
+            { util::ModuleIndex::Main,          0x0015EBD0,                 "_ZNK16SensorHitChecker13doObjColGroupEP11SensorGroupP11SensorGroup" },
+            { util::ModuleIndex::Main,          0x0015ED40,                 "_ZNK16SensorHitChecker19doObjColInSameGroupEP11SensorGroup" },
+            { util::ModuleIndex::Main,          0x0015EE80,                 "_ZN2MR18initHitSensorGroupEP9HitSensor" },
+            { util::ModuleIndex::Main,          0x0015EEAC,                 "_ZN16SensorHitCheckerD1Ev" },
+
+            { util::ModuleIndex::Main,          0x0015EED0,                 "_ZN15HitSensorKeeperC1Ei" },
+            { util::ModuleIndex::Main,          0x0015EF34,                 "_ZN15HitSensorKeeper3addEPKcmtfP9LiveActorNRK9JGeometry5TVec3IfEE" },
+            { util::ModuleIndex::Main,          0x0015EFF8,                 "_ZN15HitSensorKeeper11addCallbackEPKcmtfP9LiveActor" },   
+            { util::ModuleIndex::Main,          0x0015F0D0,                 "_ZNK15HitSensorKeeper9getSensorEPKc" },    
+            { util::ModuleIndex::Main,          0x0015F190,                 "_ZN15HitSensorKeeper6updateEv" },
+            { util::ModuleIndex::Main,          0x0015F1E0,                 "_ZN15HitSensorKeeper8doObjColEv" },
+            { util::ModuleIndex::Main,          0x0015F230,                 "_ZN15HitSensorKeeper5clearEv" },
+            { util::ModuleIndex::Main,          0x0015F270,                 "_ZN15HitSensorKeeper8validateEv" },
+            { util::ModuleIndex::Main,          0x0015F2C0,                 "_ZN15HitSensorKeeper10invalidateEv" },
+            { util::ModuleIndex::Main,          0x0015F310,                 "_ZN15HitSensorKeeper16validateBySystemEv" },
+            { util::ModuleIndex::Main,          0x0015F360,                 "_ZN15HitSensorKeeper18invalidateBySystemEv" },   
+            { util::ModuleIndex::Main,          0x0015F3AC,                 "_ZNK15HitSensorKeeper16getNthSensorInfoEi" },    
+            { util::ModuleIndex::Main,          0x0015F3C0,                 "_ZNK15HitSensorKeeper13getSensorInfoEPKc" },
+
+            { util::ModuleIndex::Main,          0x0015F480,                 "_ZN9HitSensorC1EmtfP9LiveActor" },
+            { util::ModuleIndex::Main,          0x0015F508,                 "_ZN9HitSensor14receiveMessageEmP9HitSensor" },
+            { util::ModuleIndex::Main,          0x0015F51C,                 "_ZN9HitSensor7setTypeEm" },  
+            { util::ModuleIndex::Main,          0x0015F594,                 "_ZNK9HitSensor6isTypeEm" },       
+            { util::ModuleIndex::Main,          0x0015F5A4,                 "_ZN9HitSensor8validateEv" },
+            { util::ModuleIndex::Main,          0x0015F5D4,                 "_ZN9HitSensor10invalidateEv" },
+            { util::ModuleIndex::Main,          0x0015F61C,                 "_ZN9HitSensor16validateBySystemEv" },
+            { util::ModuleIndex::Main,          0x0015F668,                 "_ZN9HitSensor18invalidateBySystemEv" },
+            { util::ModuleIndex::Main,          0x0015F6B0,                 "_ZN9HitSensor12addHitSensorEP9HitSensor" },
+
+            { util::ModuleIndex::Main,          0x0015F6D8,                 "_ZN13HitSensorInfo12setFollowPosENPK9JGeometry5TVec3IfEE" },    
+            { util::ModuleIndex::Main,          0x0015F6E0,                 "_ZN13HitSensorInfo12setFollowMtxEPA4_f" },
+            { util::ModuleIndex::Main,          0x0015F6E8,                 "_ZN13HitSensorInfoC1EPKcP9HitSensorNPK9JGeometry5TVec3IfEEPA4_fNRK9JGeometry5TVec3IfEEb" },
+            { util::ModuleIndex::Main,          0x0015F754,                 "_ZN13HitSensorInfo6updateEv" },
+            { util::ModuleIndex::Main,          0x0015F8B0,                 "_ZN13HitSensorInfo8doObjColEv" },
+
+            { util::ModuleIndex::Main,          0x00168F3C,                 "_ZN5SpineC1EPvPK5Nervel" },
+            { util::ModuleIndex::Main,          0x00168F94,                 "_ZN5Spine6updateEv" },
+            { util::ModuleIndex::Main,          0x00169030,                 "_ZN5Spine8setNerveEPK5Nerve" },
+            { util::ModuleIndex::Main,          0x0016907C,                 "_ZNK5Spine15getCurrentNerveEv" },
+
+            { util::ModuleIndex::Main,          0x00169090,                 "_ZN16ActorStateKeeperC1Ei" },
+            { util::ModuleIndex::Main,          0x00169120,                 "_ZN16ActorStateKeeper8addStateEP23ActorStateBaseInterfacePK5NervePKc" },
+            { util::ModuleIndex::Main,          0x00169148,                 "_ZN16ActorStateKeeper18updateCurrentStateEv" },
+            { util::ModuleIndex::Main,          0x00169170,                 "_ZN16ActorStateKeeper10startStateEPK5Nerve" },
+            { util::ModuleIndex::Main,          0x001691B4,                 "_ZNK16ActorStateKeeper6isDeadEv" },
+            { util::ModuleIndex::Main,          0x001691D8,                 "_ZN16ActorStateKeeper8endStateEPK5Nerve" },
+
+            { util::ModuleIndex::Main,          0x00170558,                 "_ZN23ActorStateBaseInterface6updateEv" },
+            { util::ModuleIndex::Main,          0x001705AC,                 "_ZN23ActorStateBaseInterface6appearEv" },
+            { util::ModuleIndex::Main,          0x001705B4,                 "_ZN23ActorStateBaseInterface4killEv" },
+
+            { util::ModuleIndex::Main,          0x00175EB4,                 "_ZN7NameObjC1EPKc" },
+            { util::ModuleIndex::Main,          0x00175F0C,                 "_ZN7NameObj7setNameEPKc" },
+            { util::ModuleIndex::Main,          0x00175F28,                 "_ZN7NameObjD1Ev" },
+            { util::ModuleIndex::Main,          0x00175F4C,                 "_ZN7NameObj4initERK12JMapInfoIter" },
+            { util::ModuleIndex::Main,          0x00175F50,                 "_ZN7NameObj18initAfterPlacementEv" },
+            { util::ModuleIndex::Main,          0x00175F54,                 "_ZN7NameObj8movementEv" },
+            { util::ModuleIndex::Main,          0x00175F58,                 "_ZNK7NameObj4drawEv" },
+            { util::ModuleIndex::Main,          0x00175F5C,                 "_ZN7NameObj8calcAnimEv" },
+            { util::ModuleIndex::Main,          0x00175F60,                 "_ZN7NameObj16calcViewAndEntryEv" },
+            { util::ModuleIndex::Main,          0x00175F64,                 "_ZN7NameObj15initWithoutIterEv" },          
+            { util::ModuleIndex::Main,          0x00175F98,                 "_ZN7NameObj13setLinkedInfoERK12JMapInfoIter" },
+            { util::ModuleIndex::Main,          0x00175FA0,                 "_ZN7NameObj15executeMovementEv" },
+            { util::ModuleIndex::Main,          0x00175FB8,                 "_ZN7NameObj13syncWithFlagsEv" },
+
+            { util::ModuleIndex::Main,          0x00175FF0,                 "_ZN15NameObjFunction17requestMovementOnEP7NameObj" },
+            { util::ModuleIndex::Main,          0x00176020,                 "_ZN15NameObjFunction18requestMovementOffEP7NameObj" },
+
+            { util::ModuleIndex::Main,          0x00177F20,                 "_ZN14NameObjFactory10getCreatorEPKc" },
+
+            { util::ModuleIndex::Main,          0x0017C000,                 "_ZN14NameObjFactory13createNameObjI16BenefitItemOneUpEEP7NameObjPKc" },
+
+            { util::ModuleIndex::Main,          0x001803DC,                 "_ZNK15MorphItemObjNeo6isDemoEv" },
+            { util::ModuleIndex::Main,          0x001803FC,                 "_ZN15MorphItemObjNeo17emitAppearEffectsEv" },
+            { util::ModuleIndex::Main,          0x00180400,                 "_ZN15MorphItemObjNeo20appearTransformationEv" },
+            { util::ModuleIndex::Main,          0x00180404,                 "_ZN15MorphItemObjNeo18killTransformationEv" },
+
+            { util::ModuleIndex::Main,          0x00180DD8,                 "_ZN14SceneObjHolderC1Ev" },
+            { util::ModuleIndex::Main,          0x00180DE4,                 "_ZN14SceneObjHolder10newEachObjEi" },
+            { util::ModuleIndex::Main,          0x001821EC,                 "_ZNK14SceneObjHolder6getObjEi" }, 
+            { util::ModuleIndex::Main,          0x00182200,                 "_ZN14SceneObjHolder6createEi" },
+            
+            { util::ModuleIndex::Main,          0x00183658,                 "_ZN9GameSceneC1Ev" },
+            { util::ModuleIndex::Main,          0x00183780,                 "_ZN9GameSceneD1Ev" },
+            { util::ModuleIndex::Main,          0x001837B0,                 "_ZN9GameScene4initEv" },
+
+            { util::ModuleIndex::Main,          0x001837B0,                 "_ZN14GameScenePatch4initEv" }, // Custom to patch virtual void GameScene::init(JMapInfoIter&);    
+
+            { util::ModuleIndex::Main,          0x00184B74,                 "_ZN5SceneC1EPKc" },
+            { util::ModuleIndex::Main,          0x00184BFC,                 "_ZN5SceneD1Ev" },
+            { util::ModuleIndex::Main,          0x00184C20,                 "_ZN5Scene4initEv" },
+            { util::ModuleIndex::Main,          0x00184C24,                 "_ZN5Scene5startEv" },
+            { util::ModuleIndex::Main,          0x00184C28,                 "_ZN5Scene6updateEv" },
+            { util::ModuleIndex::Main,          0x00184C2C,                 "_ZNK5Scene4drawEv" },
+            { util::ModuleIndex::Main,          0x00184C30,                 "_ZN5Scene8calcAnimEv" },
+            { util::ModuleIndex::Main,          0x00184C34,                 "_ZN5Scene23initNameObjListExecutorEv" },
+            { util::ModuleIndex::Main,          0x00184C7C,                 "_ZN5Scene18initSceneObjHolderEv" },
+
+            { util::ModuleIndex::Main,          0x001E9044,                 "_ZN10MarioActorC1EPKc" },
+            { util::ModuleIndex::Main,          0x001E9044,                 "_ZN15MarioActorPatch21MarioActorConstructorEv" }, // Custom to patch MarioActor::MarioActor(const char*);  
+            { util::ModuleIndex::Main,          0x001EDB30,                 "_ZN10MarioActor20takenDamageBehaviourEv" },
+            { util::ModuleIndex::Main,          0x001EDB30,                 "_ZN15MarioActorPatch20takenDamageBehaviourEv" }, // Custom to patch void MarioActor::takenDamageBehaviour();
+            { util::ModuleIndex::Main,          0x001EDC2C,                 "_ZN10MarioActor7incLifeEj" },
+            { util::ModuleIndex::Main,          0x001EDC2C,                 "_ZN15MarioActorPatch7incLifeEv" }, // Custom to patch void MarioActor::incLife(u32);
+            { util::ModuleIndex::Main,          0x001FB040,                 "_ZN10MarioActor19LifeRelatedFunctionEv" },
+            { util::ModuleIndex::Main,          0x001FB040,                 "_ZN15MarioActorPatch19LifeRelatedFunctionEv" }, // Custom to patch void MarioActor::LiveRelatedFunction();
+
+            { util::ModuleIndex::Main,          0x0025AFE0,                 "_ZN17StarPointerTargetC1EfNPK9JGeometry5TVec3IfEEPA4_fN9JGeometry5TVec3IfEE" },
+
+            { util::ModuleIndex::Main,          0x0026B3C0,                 "_ZN28CounterLayoutControllerPatch4initEv" }, // Custom to patch void CounterLayoutControllerPatch::init(JMapInfoIter&);
+
+            { util::ModuleIndex::Main,          0x0035EF50,                 "_ZN15MorphItemObjNeoC1EPKc" },
+            { util::ModuleIndex::Main,          0x0035EF50,                 "_ZN15MorphItemObjNeoC2EPKc" },
+            { util::ModuleIndex::Main,          0x0035EFAC,                 "_ZN15MorphItemObjNeo4initERK12JMapInfoIter" },
+            { util::ModuleIndex::Main,          0x0035F520,                 "_ZN15MorphItemObjNeo18initAfterPlacementEv" },
+            { util::ModuleIndex::Main,          0x0035F53C,                 "_ZN15MorphItemObjNeo17makeActorAppearedEv" },
+            { util::ModuleIndex::Main,          0x0035F578,                 "_ZN15MorphItemObjNeo13makeActorDeadEv" },
+            { util::ModuleIndex::Main,          0x0035F5AC,                 "_ZN15MorphItemObjNeo6appearEv" },
+            { util::ModuleIndex::Main,          0x0035F68C,                 "_ZN15MorphItemObjNeo4killEv" },
+            { util::ModuleIndex::Main,          0x0035F6BC,                 "_ZN15MorphItemObjNeo7controlEv" },
+            { util::ModuleIndex::Main,          0x0035FA9C,                 "_ZN15MorphItemObjNeo17calcAndSetBaseMtxEv" },
+            { util::ModuleIndex::Main,          0x0035FCF4,                 "_ZN15MorphItemObjNeo22receiveMsgPlayerAttackEjP9HitSensorS1_" },
+            { util::ModuleIndex::Main,          0x0035FE14,                 "_ZN15MorphItemObjNeo15receiveOtherMsgEjP9HitSensorS1_" },
+
+            { util::ModuleIndex::Main,          0x003755D0,                 "_ZN2MR19tryCreateDummyModelEP9LiveActorRK12JMapInfoIterli" },
+
+            { util::ModuleIndex::Main,          0x003A1490,                 "_ZN19MorphItemCollectionC1EPKc" },
+            { util::ModuleIndex::Main,          0x003A1490,                 "_ZN19MorphItemCollectionC2EPKc" },
+            { util::ModuleIndex::Main,          0x003A14CC,                 "_ZN19MorphItemCollection4initERK12JMapInfoIter" },
+            { util::ModuleIndex::Main,          0x003A14CC,                 "_ZN24MorphItemCollectionPatch4initEv" }, // custom to patch MorphItemCollectionPatch::init
+            { util::ModuleIndex::Main,          0x003A1554,                 "_ZN19MorphItemCollection16initPowerUpModelERK12JMapInfoIter" },
+            { util::ModuleIndex::Main,          0x003A1690,                 "_ZN19MorphItemCollection17calcAndSetBaseMtxEv" },
+            { util::ModuleIndex::Main,          0x003A16F4,                 "_ZN19MorphItemCollectionD1Ev" },
+            { util::ModuleIndex::Main,          0x003A1718,                 "_ZN19MorphItemCollection7exeWaitEv" },
+
+            { util::ModuleIndex::Main,          0x009108F0,                 "_ZN19NameObjFactoryPatch19NameObjListAccessorEv" } // Custom symbol to access the NameObjList
+        >,
+
+        //***************************************************************************************//
+        //                                                                                       //
+        //***************************************************************************************//
+    
         UserTableType<VersionType::V1_2_0,
             { util::ModuleIndex::Main,          0x00086F30,                 "_ZN16GameDataFunction34tryOnDimensionBigCastleGalaxyCometEv" },
             { util::ModuleIndex::Main,          0x00087440,                 "_ZN16GameDataFunction13isLuigiPlayerEv" },
@@ -76,10 +340,10 @@ namespace exl::reloc {
             { util::ModuleIndex::Main,          0x000D17B0,                 "_ZN2MR13getObjectNameEPPKcRK12JMapInfoIter" },
             { util::ModuleIndex::Main,          0x000D1880,                 "_ZN2MR12isObjectNameERK12JMapInfoIterPKc" },
 
-            { util::ModuleIndex::Main,          0x000D9E50,                 "_ZN2MR17validateHitSensorEP9HitSensor" },
-            { util::ModuleIndex::Main,          0x000D9E60,                 "_ZN2MR19invalidateHitSensorEP9HitSensor" },
-
             { util::ModuleIndex::Main,          0x000D9B80,                 "_ZN2MR12isSensorTypeEPK9HitSensorm" },
+
+            { util::ModuleIndex::Main,          0x000D9E50,                 "_ZN2MR17validateHitSensorEP9HitSensor" },
+            { util::ModuleIndex::Main,          0x000D9E60,                 "_ZN2MR19invalidateHitSensorEP9HitSensor" },   
 
             { util::ModuleIndex::Main,          0x0012D774,                 "_ZN23ActorStateBaseInterface4initEv" },
             { util::ModuleIndex::Main,          0x0012DA58,                 "_ZN23ActorStateBaseInterface7controlEv" },
@@ -339,11 +603,11 @@ namespace exl::reloc {
 
             { util::ModuleIndex::Main,          0x000D1820,                 "_ZN2MR13getObjectNameEPPKcRK12JMapInfoIter" },
             { util::ModuleIndex::Main,          0x000D18F0,                 "_ZN2MR12isObjectNameERK12JMapInfoIterPKc" },
+
+            { util::ModuleIndex::Main,          0x000D9B50,                 "_ZN2MR12isSensorTypeEPK9HitSensorm" },
                                                                             
             { util::ModuleIndex::Main,          0x000D9E20,                 "_ZN2MR17validateHitSensorEP9HitSensor" },
-            { util::ModuleIndex::Main,          0x000D9E30,                 "_ZN2MR19invalidateHitSensorEP9HitSensor" },
-                                                                            
-            { util::ModuleIndex::Main,          0x000D9B50,                 "_ZN2MR12isSensorTypeEPK9HitSensorm" },
+            { util::ModuleIndex::Main,          0x000D9E30,                 "_ZN2MR19invalidateHitSensorEP9HitSensor" },      
                                                                             
             { util::ModuleIndex::Main,          0x0012D364,                 "_ZN23ActorStateBaseInterface4initEv" },
             { util::ModuleIndex::Main,          0x0012D648,                 "_ZN23ActorStateBaseInterface7controlEv" },
@@ -495,16 +759,16 @@ namespace exl::reloc {
             { util::ModuleIndex::Main,          0x00184B14,                 "_ZN5Scene23initNameObjListExecutorEv" },
             { util::ModuleIndex::Main,          0x00184B5C,                 "_ZN5Scene18initSceneObjHolderEv" },
                                                                             
-            { util::ModuleIndex::Main,          0x0025A510,                 "_ZN10MarioActorC1EPKc" },
-            { util::ModuleIndex::Main,          0x0025A510,                 "_ZN15MarioActorPatch21MarioActorConstructorEv" }, // Custom to patch MarioActor::MarioActor(const char*);  
-            { util::ModuleIndex::Main,          0x001E8834,                 "_ZN10MarioActor20takenDamageBehaviourEv" },
-            { util::ModuleIndex::Main,          0x001E8834,                 "_ZN15MarioActorPatch20takenDamageBehaviourEv" }, // Custom to patch void MarioActor::takenDamageBehaviour();
-            { util::ModuleIndex::Main,          0x001ED330,                 "_ZN10MarioActor7incLifeEm" },
-            { util::ModuleIndex::Main,          0x001ED330,                 "_ZN15MarioActorPatch7incLifeEv" }, // Custom to patch void MarioActor::incLife(u32);
-            { util::ModuleIndex::Main,          0x001ED42C,                 "_ZN10MarioActor19LifeRelatedFunctionEv" },
-            { util::ModuleIndex::Main,          0x001ED42C,                 "_ZN15MarioActorPatch19LifeRelatedFunctionEv" }, // Custom to patch void MarioActor::LiveRelatedFunction();
+            { util::ModuleIndex::Main,          0x001E8834,                 "_ZN10MarioActorC1EPKc" },
+            { util::ModuleIndex::Main,          0x001E8834,                 "_ZN15MarioActorPatch21MarioActorConstructorEv" }, // Custom to patch MarioActor::MarioActor(const char*);  
+            { util::ModuleIndex::Main,          0x001ED330,                 "_ZN10MarioActor20takenDamageBehaviourEv" },
+            { util::ModuleIndex::Main,          0x001ED330,                 "_ZN15MarioActorPatch20takenDamageBehaviourEv" }, // Custom to patch void MarioActor::takenDamageBehaviour();
+            { util::ModuleIndex::Main,          0x001ED42C,                 "_ZN10MarioActor7incLifeEm" },
+            { util::ModuleIndex::Main,          0x001ED42C,                 "_ZN15MarioActorPatch7incLifeEv" }, // Custom to patch void MarioActor::incLife(u32);
+            { util::ModuleIndex::Main,          0x001FA7F0,                 "_ZN10MarioActor19LifeRelatedFunctionEv" },
+            { util::ModuleIndex::Main,          0x001FA7F0,                 "_ZN15MarioActorPatch19LifeRelatedFunctionEv" }, // Custom to patch void MarioActor::LiveRelatedFunction();
 
-            { util::ModuleIndex::Main,          0x001FA7F0,                 "_ZN17StarPointerTargetC1EfNPK9JGeometry5TVec3IfEEPA4_fN9JGeometry5TVec3IfEE" },
+            { util::ModuleIndex::Main,          0x0025A510,                 "_ZN17StarPointerTargetC1EfNPK9JGeometry5TVec3IfEEPA4_fN9JGeometry5TVec3IfEE" },
 
             { util::ModuleIndex::Main,          0x0026A7D0,                 "_ZN28CounterLayoutControllerPatch4initEv" }, // Custom to patch void CounterLayoutControllerPatch::init(JMapInfoIter&);
                    
