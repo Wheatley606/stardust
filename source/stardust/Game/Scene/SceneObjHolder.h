@@ -160,11 +160,13 @@ class SceneObjHolder {
 public:
     SceneObjHolder();
 
-    NameObj* create(int id);
     NameObj* getObj(int id) const;
-
     NameObj* newEachObj(int id);
 
     NameObj* mObj[154]; // _0
 };
-static_assert(sizeof(SceneObjHolder) == 0x4D0, "NerveExecutor Size");
+static_assert(sizeof(SceneObjHolder) == 0x4D0, "SceneObjHolder Size");
+
+namespace MR {
+    NameObj* createSceneObj(int id);
+}
