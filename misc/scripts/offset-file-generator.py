@@ -107,7 +107,7 @@ def main():
 
     versions = list(offsets.columns.values)[1:]
 
-    file = open("offsets.hpp", "w+")
+    file = open("source/program/offsets.hpp", "w+")
 
     file.write(fileBegin)
 

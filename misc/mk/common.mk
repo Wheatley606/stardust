@@ -118,15 +118,21 @@ else
 	export APP_JSON := $(TOPDIR)/$(CONFIG_JSON)
 endif
 
-.PHONY: $(BUILD) clean all
+.PHONY: $(BUILD) clean all offsets
 
 #---------------------------------------------------------------------------------
 all: $(BUILD)
 
-$(BUILD):
+$(BUILD): offsets
 	@[ -d $@ ] || mkdir -p $@
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(MK_PATH)/common.mk
 	@$(SHELL) $(SCRIPTS_PATH)/post-build.sh
+
+#---------------------------------------------------------------------------------
+offsets:
+	@echo "Generating offsets..."
+	@$(PYTHON) $(SCRIPTS_PATH)/offset-file-generator.py
+	@echo "File generated at ... source/program/offsets.hpp"
 
 #---------------------------------------------------------------------------------
 clean:
