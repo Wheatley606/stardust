@@ -5,7 +5,8 @@ indent = ""
 versionToStardust = {
     "1.0.0" : "DEFAULT",
     "1.2.0" : "V1_2_0",
-    "1.3.0" : "V1_3_0"
+    "1.3.0" : "V1_3_0",
+    "1.4.0" : "V1_4_0"
 }
 
 fileBegin = """#pragma once
