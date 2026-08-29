@@ -41,6 +41,7 @@ public:
     virtual void makeActorAppeared();
     virtual void kill();
     virtual void makeActorDead();
+    // virtual void FUN_000BEA10(); // For version 1.4.0 and higher (artificially patched at actor creation time)
     virtual bool receiveMessage(u32 msg, HitSensor *pSender, HitSensor *pReceiver);
     virtual MtxPtr getBaseMtx() const;
     virtual MtxPtr getTakingMtx() const;
